@@ -1,0 +1,72 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "tsconfigRootDir": "./",
+    "project": "tsconfig.json",
+    "ecmaVersion": 13,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "prettier",
+    "react",
+    // "react-hooks",
+    "@typescript-eslint"
+  ],
+    "rules": {
+        "@typescript-eslint/naming-convention" : "off",
+        "no-param-reassign": 0,
+        "import/no-cycle": "off",
+        "no-console": "off",
+        "prettier/prettier": [
+            2,
+            {
+                "singleQuote": true,
+                "semi": true,
+                "trailingComma": "all",
+                "printWidth": 100,
+                "tabWidth":2,
+                "endOfLine": "auto"
+              }
+          ],
+       "react/jsx-filename-extension" : [
+       1,
+       {"extensions" : [".js", ".jsx",".ts", ".tsx"]}
+    ],
+    "react/jsx-no-constructed-context-values": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-props-no-spreading": "off",
+    //"semicolon": [true, "never", "ignore-interfaces"] 
+    "react/jsx-boolean-value" : "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"],
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  }
+}
